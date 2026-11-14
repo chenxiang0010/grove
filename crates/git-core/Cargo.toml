@@ -1,0 +1,11 @@
+[package]
+name = "git-core"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+# Reads (status, log, refs, diff, blame) run in-process through libgit2.
+# Writes shell out to `git` so hooks, credential helpers, signing and
+# `.gitattributes` filters behave exactly as on the command line.
+git2 = { version = "0.21", default-features = false }
